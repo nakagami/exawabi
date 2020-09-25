@@ -1,0 +1,13 @@
+[package]
+name = "awabi_nif"
+version = "0.1.0"
+authors = []
+edition = "2018"
+
+[lib]
+name = "awabi_nif"
+path = "src/lib.rs"
+crate-type = ["dylib"]
+
+[dependencies]
+rustler = "0.22.0-rc.0"
