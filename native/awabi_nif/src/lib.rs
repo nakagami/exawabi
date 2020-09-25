@@ -42,4 +42,4 @@ pub fn tokenize_n_best(s: String, n: u32) -> Vec<Vec<(String, String)>> {
 }
 
 
-rustler::init!("Elixir.AwabiNif", [tokenize, tokenize_n_best]);
+rustler::init!("Elixir.ExAwabi", [tokenize, tokenize_n_best]);
