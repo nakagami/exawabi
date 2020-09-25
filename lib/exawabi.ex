@@ -1,18 +1,11 @@
-defmodule Exawabi do
-  @moduledoc """
-  Documentation for Exawabi.
-  """
+defmodule ExAwabi do
+  use Rustler, otp_app: :exawabi, crate: "awabi_nif"
 
-  @doc """
-  Hello world.
+  @spec tokenize(binary) :: [binary]
+  def tokenize(_s), do: error()
 
-  ## Examples
+  @spec tokenize_n_best(binary, integer) :: [[binary]]
+  def tokenize_n_best(_s, _n), do: error()
 
-      iex> Exawabi.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
+  defp error(), do: :erlang.nif_error(:nif_not_loaded)
 end

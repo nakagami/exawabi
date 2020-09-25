@@ -32,13 +32,13 @@ lazy_static! {
 }
 
 #[rustler::nif]
-fn tokenize(s: &str) -> Vec<(String, String)> {
-    TOK.tokenize(s)
+pub fn tokenize(s: String) -> Vec<(String, String)> {
+    TOK.tokenize(&s)
 }
 
 #[rustler::nif]
-fn tokenize_n_best(s: &str, n: u32) -> Vec<Vec<(String, String)>> {
-    TOK.tokenize_n_best(s, n)
+pub fn tokenize_n_best(s: String, n: u32) -> Vec<Vec<(String, String)>> {
+    TOK.tokenize_n_best(&s, n)
 }
 
 

@@ -1,4 +1,4 @@
-defmodule Exawabi.MixProject do
+defmodule ExAwabi.MixProject do
   use Mix.Project
 
   def project do
@@ -7,6 +7,12 @@ defmodule Exawabi.MixProject do
       version: "0.1.0",
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
+      compilers: [:rustler] ++ Mix.compilers(),
+      rustler_crates: [
+        awabi_nif: [
+          mode: (if Mix.env() == :prod, do: :release, else: :debug)
+        ]
+      ],
       deps: deps()
     ]
   end

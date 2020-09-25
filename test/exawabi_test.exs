@@ -1,8 +1,8 @@
-defmodule ExawabiTest do
+defmodule ExAwabiTest do
   use ExUnit.Case
-  doctest Exawabi
+  doctest ExAwabi
 
-  test "greets the world" do
-    assert Exawabi.hello() == :world
+  test "tokenize" do
+    assert ExAwabi.tokenize("すもももももももものうち") == :world
   end
 end
