@@ -11,14 +11,12 @@ MeCab https://taku910.github.io/mecab/ and related dictionary is required.
 ### Debian/Ubuntu
 ```
 $ sudo apt install mecab mecab-ipadic-utf8
-$ cargo install awabi
 ```
 
 ### Mac OS X (homebrew)
 ```
 $ brew install mecab
 $ brew install mecab-ipadic
-$ cargo install awabi
 ```
 
 ## Installation
