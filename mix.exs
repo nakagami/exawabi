@@ -6,6 +6,9 @@ defmodule ExAwabi.MixProject do
       app: :exawabi,
       version: "0.1.0",
       elixir: "~> 1.9",
+      name: "ExAwabi",
+      description: "A morphological analyzer using mecab dictionary.",
+      source_url: "https://github.com/nakagami/exawabi",
       start_permanent: Mix.env() == :prod,
       compilers: [:rustler] ++ Mix.compilers(),
       rustler_crates: [
@@ -17,7 +20,6 @@ defmodule ExAwabi.MixProject do
     ]
   end
 
-  # Run "mix help compile.app" to learn about applications.
   def application do
     [
       extra_applications: [:logger]

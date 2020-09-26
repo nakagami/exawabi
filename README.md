@@ -1,6 +1,6 @@
 # Exawabi
 
-**TODO: Add description**
+`exawabi` is a python warapper for awabi(https://github.com/nakagami/awabi).
 
 ## Installation
 
@@ -15,7 +15,7 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/exawabi](https://hexdocs.pm/exawabi).
+## Usage
+
+See tests https://github.com/nakagami/exawabi/blob/master/test/exawabi_test.exs .
 
