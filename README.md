@@ -1,11 +1,13 @@
 # ExAwabi
 
-`exawabi` is a python warapper for awabi(https://github.com/nakagami/awabi).
+`exawabi` is an Elixir wrapper for [Awabi](https://github.com/nakagami/awabi),
+a morphological analyzer using [MeCab](https://en.wikipedia.org/wiki/MeCab)
+dictionary, written in Rust.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `exawabi` to your list of dependencies in `mix.exs`:
+The package can be installed by adding `exawabi` to your list of dependencies
+in `mix.exs`:
 
 ```elixir
 def deps do
@@ -15,7 +17,4 @@ def deps do
 end
 ```
 
-## Usage
-
-See tests https://github.com/nakagami/exawabi/blob/master/test/exawabi_test.exs .
-
+The docs can be found at [https://hexdocs.pm/exawabi](https://hexdocs.pm/exawabi).

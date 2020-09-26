@@ -9,12 +9,14 @@ defmodule ExAwabi.MixProject do
       version: @version,
       elixir: "~> 1.9",
       name: "ExAwabi",
-      description: "A morphological analyzer using mecab dictionary.",
+      description: """
+        Elixir wrapper for Awabi, the morphological analyzer using MeCab dictionary.
+      """,
       start_permanent: Mix.env() == :prod,
       compilers: [:rustler] ++ Mix.compilers(),
       rustler_crates: [
         awabi_nif: [
-          mode: (if Mix.env() == :prod, do: :release, else: :debug)
+          mode: if(Mix.env() == :prod, do: :release, else: :debug)
         ]
       ],
       package: package(),
@@ -40,7 +42,7 @@ defmodule ExAwabi.MixProject do
   defp docs() do
     [
       source_ref: "v#{@version}",
-      main: "readme",
+      main: "ExAwabi",
       extras: ["README.md"]
     ]
   end
@@ -48,7 +50,8 @@ defmodule ExAwabi.MixProject do
   defp deps do
     [
       {:rustler, "~> 0.21"},
-      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
+      {:credo, "~> 1.5.0-rc.2", only: [:dev, :test], runtime: false}
     ]
   end
 end
