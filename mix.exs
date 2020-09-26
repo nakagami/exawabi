@@ -1,14 +1,15 @@
 defmodule ExAwabi.MixProject do
   use Mix.Project
 
+  @version "0.1.0"
+
   def project do
     [
       app: :exawabi,
-      version: "0.1.0",
+      version: @version,
       elixir: "~> 1.9",
       name: "ExAwabi",
       description: "A morphological analyzer using mecab dictionary.",
-      source_url: "https://github.com/nakagami/exawabi",
       start_permanent: Mix.env() == :prod,
       compilers: [:rustler] ++ Mix.compilers(),
       rustler_crates: [
@@ -16,6 +17,8 @@ defmodule ExAwabi.MixProject do
           mode: (if Mix.env() == :prod, do: :release, else: :debug)
         ]
       ],
+      package: package(),
+      docs: docs(),
       deps: deps()
     ]
   end
@@ -26,10 +29,26 @@ defmodule ExAwabi.MixProject do
     ]
   end
 
-  # Run "mix help deps" to learn about dependencies.
+  defp package do
+    [
+      maintainers: ["Hajime Nakagami"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/nakagami/exawabi"}
+    ]
+  end
+
+  defp docs() do
+    [
+      source_ref: "v#{@version}",
+      main: "readme",
+      extras: ["README.md"]
+    ]
+  end
+
   defp deps do
     [
-      {:rustler, "~> 0.21"}
+      {:rustler, "~> 0.21"},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
 end
