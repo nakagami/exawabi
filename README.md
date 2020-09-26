@@ -1,4 +1,4 @@
-# Exawabi
+# ExAwabi
 
 `exawabi` is a python warapper for awabi(https://github.com/nakagami/awabi).
 
