@@ -4,6 +4,23 @@
 a morphological analyzer using [MeCab](https://en.wikipedia.org/wiki/MeCab)
 dictionary, written in Rust.
 
+## Requirements
+
+MeCab https://taku910.github.io/mecab/ and related dictionary is required.
+
+### Debian/Ubuntu
+```
+$ sudo apt install mecab mecab-ipadic-utf8
+$ cargo install awabi
+```
+
+### Mac OS X (homebrew)
+```
+$ brew install mecab
+$ brew install mecab-ipadic
+$ cargo install awabi
+```
+
 ## Installation
 
 The package can be installed by adding `exawabi` to your list of dependencies
@@ -16,5 +33,7 @@ def deps do
   ]
 end
 ```
+
+And need to install [Rust](https://www.rust-lang.org/tools/install) on build.
 
 The docs can be found at [https://hexdocs.pm/exawabi](https://hexdocs.pm/exawabi).
