@@ -29,7 +29,7 @@ defmodule ExAwabi.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:rustler, "~> 0.22-rc"}
+      {:rustler, "~> 0.21"}
     ]
   end
 end
