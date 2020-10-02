@@ -1,6 +1,7 @@
 defmodule ExAwabi.MixProject do
   use Mix.Project
 
+  @source_url "https://github.com/nakagami/exawabi"
   @version "0.1.2"
 
   def project do
@@ -35,15 +36,15 @@ defmodule ExAwabi.MixProject do
     [
       maintainers: ["Hajime Nakagami"],
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/nakagami/exawabi"},
+      links: %{"GitHub" => @source_url},
       files: ["lib", "native", "mix.exs", "README*", "LICENSE*"]
     ]
   end
 
   defp docs() do
     [
-      source_ref: "v#{@version}",
       main: "ExAwabi",
+      source_url: @source_url,
       extras: ["README.md"]
     ]
   end

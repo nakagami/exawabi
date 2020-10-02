@@ -4,9 +4,12 @@
 a morphological analyzer using [MeCab](https://en.wikipedia.org/wiki/MeCab)
 dictionary, written in Rust.
 
+Additional doc can be found at [https://hexdocs.pm/exawabi](https://hexdocs.pm/exawabi).
+
 ## Requirements
 
-MeCab https://taku910.github.io/mecab/ and related dictionary is required.
+- [MeCab](https://taku910.github.io/mecab/) and related dictionary.
+- [Rust](https://www.rust-lang.org/tools/install) for compiling Rust's Natively Implemented Function (NIF) binding.
 
 ### Debian/Ubuntu
 ```
@@ -31,7 +34,3 @@ def deps do
   ]
 end
 ```
-
-And need to install [Rust](https://www.rust-lang.org/tools/install) on compile NIF.
-
-The docs can be found at [https://hexdocs.pm/exawabi](https://hexdocs.pm/exawabi).
