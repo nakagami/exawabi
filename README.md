@@ -32,6 +32,6 @@ def deps do
 end
 ```
 
-And need to install [Rust](https://www.rust-lang.org/tools/install) on build.
+And need to install [Rust](https://www.rust-lang.org/tools/install) on compile NIF.
 
 The docs can be found at [https://hexdocs.pm/exawabi](https://hexdocs.pm/exawabi).
