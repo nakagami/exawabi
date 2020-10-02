@@ -1,7 +1,7 @@
 defmodule ExAwabi.MixProject do
   use Mix.Project
 
-  @version "0.1.1"
+  @version "0.1.2"
 
   def project do
     [
@@ -35,7 +35,8 @@ defmodule ExAwabi.MixProject do
     [
       maintainers: ["Hajime Nakagami"],
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/nakagami/exawabi"}
+      links: %{"GitHub" => "https://github.com/nakagami/exawabi"},
+      files: ["lib", "native", "mix.exs", "README*", "LICENSE*"]
     ]
   end
 
