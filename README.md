@@ -1,8 +1,15 @@
 # ExAwabi
 
-`exawabi` is an Elixir wrapper for [Awabi](https://github.com/nakagami/awabi),
-a morphological analyzer using [MeCab](https://en.wikipedia.org/wiki/MeCab)
-dictionary, written in Rust.
+<!-- MDOC !-->
+
+[![hex.pm](https://img.shields.io/hexpm/v/exawabi.svg)](https://hex.pm/packages/exawabi)
+[![hex.pm](https://img.shields.io/hexpm/dt/exawabi.svg)](https://hex.pm/packages/exawabi)
+[![hex.pm](https://img.shields.io/hexpm/l/exawabi.svg)](https://hex.pm/packages/exawabi)
+[![github.com](https://img.shields.io/github/last-commit/nakagami/exawabi.svg)](https://github.com/nakagami/exawabi/commits/master)
+
+Elixir wrapper for [Awabi](https://github.com/nakagami/awabi), a morphological
+analyzer using [MeCab](https://en.wikipedia.org/wiki/MeCab) dictionary, written
+in Rust.
 
 Additional doc can be found at [https://hexdocs.pm/exawabi](https://hexdocs.pm/exawabi).
 

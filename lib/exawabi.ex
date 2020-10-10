@@ -1,5 +1,8 @@
 defmodule ExAwabi do
-  @moduledoc ExAwabi.MixProject.project()[:description]
+  @moduledoc "README.md"
+             |> File.read!()
+             |> String.split("<!-- MDOC !-->")
+             |> Enum.fetch!(1)
 
   use Rustler, otp_app: :exawabi, crate: "awabi_nif"
 
