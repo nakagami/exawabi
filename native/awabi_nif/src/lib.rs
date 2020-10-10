@@ -22,13 +22,16 @@
 *SOFTWARE.
 */
 use awabi::tokenizer;
-
+use std::env;
 
 #[macro_use]
 extern crate lazy_static;
 
 lazy_static! {
-  static ref TOK: tokenizer::Tokenizer = tokenizer::Tokenizer::new(None).unwrap();
+    static ref TOK: tokenizer::Tokenizer = match env::var("MECABRC") {
+        Ok(mecabrc) => tokenizer::Tokenizer::new(Some(mecabrc)).unwrap(),
+        Err(_e) => tokenizer::Tokenizer::new(None).unwrap(),
+    };
 }
 
 #[rustler::nif]
@@ -40,6 +43,5 @@ pub fn tokenize(s: String) -> Vec<(String, String)> {
 pub fn tokenize_n_best(s: String, n: u32) -> Vec<Vec<(String, String)>> {
     TOK.tokenize_n_best(&s, n)
 }
-
 
 rustler::init!("Elixir.ExAwabi", [tokenize, tokenize_n_best]);
