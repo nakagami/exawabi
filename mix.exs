@@ -14,7 +14,7 @@ defmodule ExAwabi.MixProject do
         Elixir wrapper for Awabi, the morphological analyzer using MeCab dictionary.
       """,
       start_permanent: Mix.env() == :prod,
-      compilers: [:rustler] ++ Mix.compilers(),
+      compilers: Mix.compilers(),
       rustler_crates: [
         awabi_nif: [
           mode: if(Mix.env() == :prod, do: :release, else: :debug)
@@ -28,7 +28,7 @@ defmodule ExAwabi.MixProject do
 
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: [:logger, :rustler]
     ]
   end
 
@@ -51,7 +51,7 @@ defmodule ExAwabi.MixProject do
 
   defp deps do
     [
-      {:rustler, "~> 0.21"},
+      {:rustler, "~> 0.23"},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
       {:credo, "~> 1.5.0-rc.2", only: [:dev, :test], runtime: false}
     ]
