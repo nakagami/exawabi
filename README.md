@@ -37,7 +37,7 @@ in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:exawabi, "~> 0.1.2"}
+    {:exawabi, "~> 0.2.1"}
   ]
 end
 ```
