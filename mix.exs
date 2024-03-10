@@ -15,11 +15,6 @@ defmodule ExAwabi.MixProject do
       """,
       start_permanent: Mix.env() == :prod,
       compilers: Mix.compilers(),
-      rustler_crates: [
-        awabi_nif: [
-          mode: if(Mix.env() == :prod, do: :release, else: :debug)
-        ]
-      ],
       package: package(),
       docs: docs(),
       deps: deps()

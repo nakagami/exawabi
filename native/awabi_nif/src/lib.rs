@@ -29,7 +29,7 @@ extern crate lazy_static;
 
 lazy_static! {
     static ref TOK: tokenizer::Tokenizer = match env::var("MECABRC") {
-        Ok(mecabrc) => tokenizer::Tokenizer::new(Some(mecabrc)).unwrap(),
+        Ok(mecabrc) => tokenizer::Tokenizer::new(Some(&mecabrc)).unwrap(),
         Err(_e) => tokenizer::Tokenizer::new(None).unwrap(),
     };
 }
