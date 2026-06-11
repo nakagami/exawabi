@@ -48,7 +48,7 @@ defmodule ExAwabi.MixProject do
     [
       {:rustler, "~> 0.33"},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
-      {:credo, "~> 1.7.7", only: [:dev, :test], runtime: false}
+      {:credo, "~> 1.7.19", only: [:dev, :test], runtime: false}
     ]
   end
 end
